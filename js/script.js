@@ -34,6 +34,9 @@ let app = {
         // Mantém um controle da posição da questão
         this.currPosition = 0;
 
+        // Controla a pontuação do jogador
+        this.score = 0;
+
         // Obtém o elemento de todas as alternativas
         let alts = document.querySelectorAll('.alternative');
 
@@ -54,6 +57,9 @@ let app = {
                 this.checkAnswer(index);
             });
         });
+
+        // Exibe a pontuação do jogador
+        this.updateStats();
 
         // Exibe a questão atual
         this.showQuestion(questions[this.currPosition]);
@@ -85,6 +91,10 @@ let app = {
         // Questão correta
         if(currQuestion.correctAnswer == userSelected) {
             console.log("Correct Answer");
+            // Atualiza a pontuação do jogador
+            this.score++;
+            // Exibe a pontuação do jogador
+            this.updateStats();
         }
         // Questão incorreta
         else {
@@ -108,6 +118,15 @@ let app = {
             // Retorna para a primeira questão
             this.currPosition = 0;
         }
+    },
+
+    // Método para atualizar a pontuação
+    updateStats: function() {
+        // Seleciona o elemento para a pontuação
+        let scoreDiv = document.getElementById('score');
+
+        // Altera a pontuação
+        scoreDiv.textContent = `Your score: ${this.score}`;
     }
 
 };
