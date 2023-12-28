@@ -10,5 +10,5 @@ O objetivo desse projeto é desenvolver um jogo de aprendizado de palavras, conf
     <i>Zenva's Language Learning Game Mockup</i>
 </p>
 
-<p>Para ser redirecionado para a página do curso, <a href="https://academy.zenva.com/course/intro-html5-game-development-mini-degree/">clique aqui</a>!</p>
+<p>Para ser redirecionado para a página do curso, <a href="https://academy.zenva.com/course/intro-html5-game-development-mini-degree/" target="_blank">clique aqui</a>!</p>
 
