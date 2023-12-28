@@ -1,9 +1,5 @@
 <style>
 
-    a {
-        text-decoration: none;
-    }
-
     figcaption {
         font-style: italic;
         text-align: center;
@@ -19,7 +15,7 @@
 
 # JavaScript Mini-Projects: Language Learning Game
 
-<p>Este repositório contém os arquivos referentes ao projeto desenvolvido durante a formação ministrada no curso <strong>Phaser Mini-Degree</strong>, oferecido pela <a href="https://academy.zenva.com/">Zenva Academy</a>!</p>
+<p>Este repositório contém os arquivos referentes ao projeto desenvolvido durante a formação ministrada no curso <strong>Phaser Mini-Degree</strong>, oferecido pela <a href="https://academy.zenva.com/" style="text-decoration: none; color: red;">Zenva Academy</a>!</p>
 
 O objetivo desse projeto é desenvolver um jogo de aprendizado de palavras, conforme o mockup abaixo:
 
