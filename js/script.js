@@ -88,17 +88,23 @@ let app = {
         // Questão atual
         let currQuestion = questions[this.currPosition];
 
-        // Questão correta
-        if(currQuestion.correctAnswer == userSelected) {
+        // Se o jogador escolheu a questão correta
+        if (currQuestion.correctAnswer == userSelected) {
+            // Exibe uma mensagem no console
             console.log("Correct Answer");
             // Atualiza a pontuação do jogador
             this.score++;
             // Exibe a pontuação do jogador
             this.updateStats();
+            // Exibe o resultado
+            this.showResult(true);
         }
-        // Questão incorreta
+        // Se o jogador escolheu a questão incorreta
         else {
+            // Exibe uma mensagem no console
             console.log("Wrong Answer");
+            // Exibe o resultado
+            this.showResult(false);
         }
 
         // Passa para a próxima questão
@@ -127,6 +133,34 @@ let app = {
 
         // Altera a pontuação
         scoreDiv.textContent = `Your score: ${this.score}`;
+    },
+
+    // Método para exibir a resposta
+    showResult: function(isCorrect) {
+        // Seleciona o elemento para exibir o resultado
+        let resultDiv = document.getElementById('result');
+
+        // Armazena o resultado que será exibido
+        let result = '';
+
+        // Verifica se a resposta está correta
+        if (isCorrect) {
+            // Resultado que será exibido para o jogador
+            result = "Correct Answer!";
+        }
+        else {
+            // Obtém a questão atual
+            let currQuestion = questions[this.currPosition];
+            // Índice da resposta correta
+            let correctAnswerIndex = currQuestion.correctAnswer;
+            // Resposta correta
+            let correctAnswerText = currQuestion.alternatives[correctAnswerIndex];
+            // Resultado que será exibido para o jogador
+            result = `Wrong! Correct answer: ${correctAnswerText}`;
+        }
+
+        // Exibe o resultado
+        resultDiv.textContent = result;
     }
 
 };
