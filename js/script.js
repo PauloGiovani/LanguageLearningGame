@@ -6,45 +6,44 @@ let question = {
 };
 
 // -----------------------------------------------------------------------------
-// Função para exibir as questões
+// Função para inicializar a aplicação
 // -----------------------------------------------------------------------------
-function showQuestion(q) {
-
-    // 1. Seleciona o elemento para o título
-    let titleDiv = document.getElementById('title');
-
-    // 2. Altera o título
-    titleDiv.textContent = q.title;
-
-    // 3. Seleciona o elemento de todas as alternativas
+function start() {
+    // Obtém o elemento de todas as alternativas
     let alts = document.querySelectorAll('.alternative');
 
-    // 4. Altera o valor de cada alternativa
+    // Percorre cada alternativa
     alts.forEach(function(element, index) {
-        // Altera o texto da alternativa
-        element.textContent = q.alternatives[index];
-        
-        // Listener para capturar o clique em cada alternativa
+        // Listener para capturar o clique
         element.addEventListener('click', function() {
             // Verifica se a alternativa está correta
-            if(q.correctAnswer == index) {
-                console.log("Correct Answer!");
-            }
-            else {
-                console.log("Wrong Answer!");
-            }
+            console.log("Check Correct Answer");
         })
     });
 
+    // Exibe a primeira questão
+    showQuestion(question);
 }
 
-// Exibe a questão e suas alternativas
-showQuestion(question);
+// -----------------------------------------------------------------------------
+// Função para exibir as questões
+// -----------------------------------------------------------------------------
+function showQuestion(q) {
+    // Seleciona o elemento para o título
+    let titleDiv = document.getElementById('title');
 
-// Seleciona o botão
-let btn = document.getElementById('btn');
+    // Altera o título
+    titleDiv.textContent = q.title;
 
-// Listener para o botão: click
-btn.addEventListener('click', function() {
-    console.log('Clicked!');
-});
+    // Obtém o elemento de todas as alternativas
+    let alts = document.querySelectorAll('.alternative');
+
+    // Percorre cada alternativa
+    alts.forEach(function(element, index) {
+        // Exibe o texto de cada alternativa
+        element.textContent = q.alternatives[index];
+    });
+}
+
+// Inicializa a aplicação
+start();
