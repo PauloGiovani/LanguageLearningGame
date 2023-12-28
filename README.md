@@ -1,6 +1,6 @@
 # JavaScript Mini-Projects: Language Learning Game
 
-<p>Este repositório contém os arquivos referentes ao projeto desenvolvido durante a formação ministrada no curso <strong>Phaser Mini-Degree</strong>, oferecido pela <a href="https://academy.zenva.com/">Zenva Academy</a>!</p>
+Este repositório contém os arquivos referentes ao projeto desenvolvido durante a formação ministrada no curso **Phaser Mini-Degree**, oferecido pela [Zenva Academy](https://academy.zenva.com/).
 
 O objetivo desse projeto é desenvolver um jogo de aprendizado de palavras, conforme o mockup abaixo:
 
@@ -10,7 +10,6 @@ O objetivo desse projeto é desenvolver um jogo de aprendizado de palavras, conf
     <i>Zenva's Language Learning Game Mockup</i>
 </p>
 
-<p>Para ser redirecionado para a página do curso, <a href="https://academy.zenva.com/course/intro-html5-game-development-mini-degree/" target="_blank">clique aqui</a>!</p>
+Para ser redirecionado para a página do curso, [clique aqui](https://academy.zenva.com/course/intro-html5-game-development-mini-degree/)!
 
-[Zenva](https://academy.zenva.com/course/intro-html5-game-development-mini-degree/)
-{:target="_blank" rel="noopener"}
+dsd
