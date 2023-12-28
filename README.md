@@ -4,12 +4,10 @@
 
 O objetivo desse projeto é desenvolver um jogo de aprendizado de palavras, conforme o mockup abaixo:
 
-<div style="text-align: center;">
-    <figure>
-        <img src="imagens/mockup.jpg" alt="Language Game Mockup">
-        <figcaption style="font-style: italic;">Zenva's Language Learning Game Mockup</figcaption>
-    </figure>
-</div>
+<figure>
+    <img src="imagens/mockup.jpg" alt="Language Game Mockup" width=400>
+    <figcaption>Zenva's Language Learning Game Mockup</figcaption>
+</figure>
 
 <p>Para ser redirecionado para a página do curso, <a href="https://academy.zenva.com/course/intro-html5-game-development-mini-degree/">clique aqui</a>!</p>
 
