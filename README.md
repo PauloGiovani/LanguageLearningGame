@@ -4,7 +4,7 @@
 
 O objetivo desse projeto é desenvolver um jogo de aprendizado de palavras, conforme o mockup abaixo:
 
-<figure>
+<figure align="center">
     <img src="imagens/mockup.jpg" alt="Language Game Mockup" width=400>
     <figcaption>Zenva's Language Learning Game Mockup</figcaption>
 </figure>
