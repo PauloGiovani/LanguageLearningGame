@@ -5,9 +5,9 @@ Este repositório contém os arquivos referentes ao projeto desenvolvido durante
 O objetivo desse projeto é desenvolver um jogo de aprendizado de palavras, conforme o mockup abaixo:
 
 <figure>
-    <img src="imagens/mockup.jpg" alt="Language Game Mockup" style="width:400px;">
-    <figcaption>Zenva's Language Learning Game Mockup</figcaption>
+    <img src="imagens/mockup.jpg" alt="Language Game Mockup" style="width:500px;">
+    <figcaption style="font-style:italic; text-align: center;">Zenva's Language Learning Game Mockup</figcaption>
 </figure>
 
-Para ser redirecionado para a página do curso, [clique aqui](https://academy.zenva.com/course/intro-html5-game-development-mini-degree/){:target="_blank"}! 
+<p>Para ser redirecionado para a página do curso, <a href="https://academy.zenva.com/course/intro-html5-game-development-mini-degree/">clique aqui</a>!</p>
 
