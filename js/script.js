@@ -1,11 +1,28 @@
 // -----------------------------------------------------------------------------
-// Objeto para representar uma questão em JavaScript
+// Objeto para representar as questões
 // -----------------------------------------------------------------------------
-let question = {
-    title: 'gato',
-    alternatives: ['dog', 'cat', 'bird', 'fish'],
-    correctAnswer: 1
-};
+let questions = [
+    {
+        title: 'gato',
+        alternatives: ['dog', 'cat', 'bird', 'fish'],
+        correctAnswer: 1
+    },
+    {
+        title: 'ave',
+        alternatives: ['mouse', 'hamster', 'lizard', 'bird'],
+        correctAnswer: 3
+    },
+    {
+        title: 'rata',
+        alternatives: ['cat', 'fish', 'rat', 'shark'],
+        correctAnswer: 2
+    },
+    {
+        title: 'mosca',
+        alternatives: ['fly', 'puma', 'fish', 'dog'],
+        correctAnswer: 0
+    }
+];
 
 // -----------------------------------------------------------------------------
 // Objeto para gerenciar a aplicação
@@ -14,6 +31,9 @@ let app = {
 
     // Método para inicializar a aplicação
     start: function() {
+        // Mantém um controle da posição da questão
+        this.currPosition = 0;
+
         // Obtém o elemento de todas as alternativas
         let alts = document.querySelectorAll('.alternative');
 
@@ -35,15 +55,12 @@ let app = {
             });
         });
 
-        // Exibe a primeira questão
-        this.showQuestion(question);
+        // Exibe a questão atual
+        this.showQuestion(questions[this.currPosition]);
     },
 
     // Método para exibir a primeira questão
     showQuestion: function(q) {
-        // Mantém um controle da questão atual
-        this.currQuestion = q;
-
         // Seleciona o elemento para o título
         let titleDiv = document.getElementById('title');
 
@@ -62,13 +79,34 @@ let app = {
 
     // Método para checar se a alternativa está correta
     checkAnswer: function(userSelected) {
+        // Questão atual
+        let currQuestion = questions[this.currPosition];
+
         // Questão correta
-        if(this.currQuestion.correctAnswer == userSelected) {
+        if(currQuestion.correctAnswer == userSelected) {
             console.log("Correct Answer");
         }
         // Questão incorreta
         else {
             console.log("Wrong Answer");
+        }
+
+        // Passa para a próxima questão
+        this.increasePosition();
+
+        // Exibe a próxima questão
+        this.showQuestion(questions[this.currPosition]);
+    },
+
+    // Método para atualizar a posição da questão
+    increasePosition: function() {
+        // Incrementa a posição da questão
+        this.currPosition++;
+
+        // Verifica se chegou na última questão
+        if (this.currPosition == questions.length) {
+            // Retorna para a primeira questão
+            this.currPosition = 0;
         }
     }
 
