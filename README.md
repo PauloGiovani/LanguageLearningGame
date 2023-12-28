@@ -12,3 +12,5 @@ O objetivo desse projeto é desenvolver um jogo de aprendizado de palavras, conf
 
 <p>Para ser redirecionado para a página do curso, <a href="https://academy.zenva.com/course/intro-html5-game-development-mini-degree/" target="_blank">clique aqui</a>!</p>
 
+[Zenva](https://academy.zenva.com/course/intro-html5-game-development-mini-degree/)
+{:target="_blank" rel="noopener"}
